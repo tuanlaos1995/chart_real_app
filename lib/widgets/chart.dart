@@ -29,7 +29,7 @@ class Chart extends StatelessWidget {
             .substring(0, 1), //formart M,T,W,T,F,S,S in week
         'amount': totalSum,
       };
-    });
+    }).reversed.toList();
   }
 
   double get totalSpending {
@@ -40,7 +40,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(groupedTransactionValues);
+    print("A ${groupedTransactionValues}");
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
